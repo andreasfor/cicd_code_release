@@ -4,16 +4,7 @@ name: CICD workflow
 env:
   TAG_VERSION: 1.0.0
 
-# on:
-#   # Trigger the workflow on push events to the "test" branch
-#   push:
-#     branches:
-#       - test
-
-#   # Trigger the workflow on pull request events for the "test" branch
-#   pull_request:
-#     branches:
-#       - test
+# Ask Subba how I protect the tet branch so I can only use a manual dispatch to run the workflow and then push the code
 
 on:
   # Allows the workflow to be manually triggered
@@ -40,10 +31,6 @@ jobs:
     needs: PyTest
     runs-on: ubuntu-latest
     steps:
-
-      # Do I need to checkout the code here if I have a job like Build above?
-      #- name: Checkout code
-      #  uses: actions/checkout@v3
 
       - name: Push code
         run: |
