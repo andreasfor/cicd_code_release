@@ -1,15 +1,19 @@
 name: CICD workflow
 
-on:
-  # Trigger the workflow on push events to the "test" branch
-  push:
-    branches:
-      - test
+# on:
+#   # Trigger the workflow on push events to the "test" branch
+#   push:
+#     branches:
+#       - test
 
-  # Trigger the workflow on pull request events for the "test" branch
-  pull_request:
-    branches:
-      - test
+#   # Trigger the workflow on pull request events for the "test" branch
+#   pull_request:
+#     branches:
+#       - test
+
+on:
+  # Allows the workflow to be manually triggered
+  workflow_dispatch:
 
 jobs:
   Build:
