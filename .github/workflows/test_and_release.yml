@@ -45,7 +45,9 @@ jobs:
       #- name: Checkout code
       #  uses: actions/checkout@v3
 
+      # Store for later
+      # git push origin dev:test --force
+
       - name: Push code
         run: |
-          # git push origin dev:test --force
           echo This is the TAG_VERSION variable: $TAG_VERSION
