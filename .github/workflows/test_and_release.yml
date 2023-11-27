@@ -1,0 +1,42 @@
+name: CICD workflow
+
+on:
+  # Trigger the workflow on push events to the "test" branch
+  push:
+    branches:
+      - test
+
+  # Trigger the workflow on pull request events for the "test" branch
+  pull_request:
+    branches:
+      - test
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+  PyTest:
+    needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Pytest
+        run: |
+          echo Simulating that we are running PyTests
+          echo I will add tests later
+          
+
+  Push_code_to_test_branch:
+    needs: PyTest
+    runs-on: ubuntu-latest
+    steps:
+
+      # Do I need to checkout the code here if I have a job like Build above?
+      #- name: Checkout code
+      #  uses: actions/checkout@v3
+
+      - name: Push code
+        run: |
+          git push origin dev:test --force
