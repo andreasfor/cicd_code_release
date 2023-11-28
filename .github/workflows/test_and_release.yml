@@ -1,0 +1,37 @@
+name: CICD workflow
+
+# Update to the tag of hte code release you want to push
+env:
+  TAG_VERSION: 1.0.0
+
+# Ask Subba how I protect the tet branch so I can only use a manual dispatch to run the workflow and then push the code
+
+on:
+  # Allows the workflow to be manually triggered
+  workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+  PyTest:
+    needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Pytest
+        run: |
+          echo Simulating that we are running PyTests
+          echo I will add tests later
+          
+
+  Push_code_to_test_branch:
+    needs: PyTest
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Push code
+        run: |
+          echo This is the TAG_VERSION variable: $TAG_VERSION
