@@ -10,4 +10,4 @@ Demonstrating how to use GitHub Actions to run tests and push a code release (a 
 In your IDE:
 - Clone the repo
 - Switch to test branch
-- run "git checkout tags/<tag> -b <branch>" to create a new branch based on the code release tag
+- run "git checkout tags/<<tag>> -b <<branch>>" to create a new branch based on the code release tag
