@@ -2,6 +2,7 @@
 Demonstrating how to use GitHub Actions to run tests and push a code release (a tag) from the dev branch to the test branch
 
 - Create the two brances.
+- Set a branch protection rule to not allow direct pushes to test branch by going to Settings --> Branches --> Require a pull request before merging. 
 - Create a a workflow in Actions that triggers manually on dispatch and on pull requests.
 - The workflow should basically only run automatic tests.
 - When you want to create a version of your code, create a code release, which will be associated with a tag.
