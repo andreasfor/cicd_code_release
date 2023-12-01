@@ -39,9 +39,7 @@ TODO
 # ------------------
 
 
-# rom my_first_class_dir import Addition
-
-from my_first_class_dir.first_class import Addition
+from src.my_first_class_dir.first_class import Addition
 
 # rom my_first_class_dir.first_class import Addition
 
