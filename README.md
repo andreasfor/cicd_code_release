@@ -1,4 +1,4 @@
-# cicd_code_resease
+# cicd_code_release
 This repo serves as a demonstrattion of: 
 - Demo 1, How to use GitHub Actions to run tests and push a code release (a tag) from the dev branch to the test branch.
 - Demo 2, How to set PYTHONPATH correctly for VS Code in order to beeing able to call a python package from another package
