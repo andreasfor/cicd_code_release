@@ -12,4 +12,8 @@ class SupportClass:
         """
         workspace_path = os.path.abspath(os.path.dirname(__file__))
 
+        workspace_path = workspace_path.replace('\\', '/')
+
         return workspace_path
+
+print(SupportClass.get_workspace_path())
