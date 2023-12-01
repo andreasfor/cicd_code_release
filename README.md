@@ -13,6 +13,9 @@ Demo 2, How to set PYTHONPATH correctly for VS Code in order to beeing able to c
 
 In your IDE:
 - Clone the repo
+- Create a virtual environment with opening the terminal and write: python -m venv .venv
+- Activate virtual environment: source .venv/Scripts/activate
+
 - Switch to test branch
 - run "git checkout tags/(tag_version) -b (new_branch_name)" to create a new branch based on the code release tag
 
