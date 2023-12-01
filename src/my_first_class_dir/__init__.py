@@ -1,0 +1,1 @@
+from first_class import Addition

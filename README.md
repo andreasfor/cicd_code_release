@@ -12,3 +12,8 @@ In your IDE:
 - Clone the repo
 - Switch to test branch
 - run "git checkout tags/(tag_version) -b (new_branch_name)" to create a new branch based on the code release tag
+
+
+VS Code setting:
+- Set PYTHONPATH in File -> Preferences -> Settings -> Then go to the top right corner, third logo from right, open the JSON settings and paste the location of your src file e.g. "terminal.integrated.env.windows": {  "PYTHONPATH": "C:/Users/anforsbe/OneDrive - Capgemini/Documents/Visual Studio Code/test_cicd/cicd_code_resease/src". 
+- Note that you could add multiple locations after each other  "C:/Users/anforsbe/OneDrive - Capgemini/Documents/Visual Studio Code/test_cicd/cicd_code_resease/src:  "C:/Users/anforsbe/OneDrive - Capgemini/Documents/Visual Studio Code/test_cicd/cicd_code_resease/tests"
