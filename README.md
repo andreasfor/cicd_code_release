@@ -1,7 +1,7 @@
-# cicd_code_resease
+# cicd_code_release
 This repo serves as a demonstrattion of: 
-Demo 1, How to use GitHub Actions to run tests and push a code release (a tag) from the dev branch to the test branch.
-Demo 2, How to set PYTHONPATH correctly for VS Code in order to beeing able to call a python package from another package
+- Demo 1, How to use GitHub Actions to run tests and push a code release (a tag) from the dev branch to the test branch.
+- Demo 2, How to set PYTHONPATH correctly for VS Code in order to beeing able to call a python package from another package
 
 ## Demo 1
 - Create the two brances.
@@ -13,6 +13,9 @@ Demo 2, How to set PYTHONPATH correctly for VS Code in order to beeing able to c
 
 In your IDE:
 - Clone the repo
+- Create a virtual environment with opening the terminal and write: python -m venv .venv
+- Activate virtual environment: source .venv/Scripts/activate
+
 - Switch to test branch
 - run "git checkout tags/(tag_version) -b (new_branch_name)" to create a new branch based on the code release tag
 
