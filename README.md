@@ -29,8 +29,8 @@ Check your workspace location:
 
 ### Step 2,
 VS Code setting:
-- Set PYTHONPATH in File -> Preferences -> Settings -> Then go to the top right corner, third logo from right, open the JSON settings and paste the location of your src file e.g. "terminal.integrated.env.windows": {  "PYTHONPATH": "c:/Users/anforsbe/Visual Studio Code/SCMBI/cicd_code_resease". 
-- Note that you could add multiple locations after each other  "Users/anforsbe/Visual Studio Code/SCMBI/cicd_code_resease:/Users/anforsbe/Visual Studio Code/SCMBI/cicd_code_resease/tests"
+- Set PYTHONPATH in File -> Preferences -> Settings -> Then go to the top right corner, third logo from right, open the JSON settings and paste the location of your directory file e.g. "terminal.integrated.env.windows": {  "PYTHONPATH": "c:/Users/anforsbe/Visual Studio Code/CICD/cicd_code_release". 
+- Note that you could add multiple locations after each other  "Users/anforsbe/Visual Studio Code/CICD/cicd_code_release/src:/Users/anforsbe/Visual Studio Code/CICD/cicd_code_release/tests"
 
 ### Step 3,
 Validate your PYHTONPATH
