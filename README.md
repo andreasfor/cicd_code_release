@@ -23,7 +23,12 @@ In your IDE:
 
 Ensure that your project is situated within a folder such such as the C drive, as opposed to locations like the Documents folder, as the latter may introduce complications to the file path. 
 
-### Step 1,
+### Approach 1, 
+
+VS Code setting:
+- Set PYTHONPATH in File -> Preferences -> Settings -> Then go to the top right corner, third logo from right, open the JSON settings and paste the location of your directory file e.g. "terminal.integrated.env.windows": {  "PYTHONPATH": "${workspaceFolder}". 
+
+### Approach 2,
 Check your workspace location:
 - run check_python_path.py then take the output
 
