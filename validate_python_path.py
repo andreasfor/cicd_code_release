@@ -7,7 +7,7 @@ import os
 import os.path
 
 src_path_os = os.getenv("PYTHONPATH")
-src_path_str = "c:/Users/anforsbe/Visual Studio Code/SCMBI/cicd_code_resease"
+src_path_str = "c:/Users/anforsbe/Visual Studio Code/CICD/cicd_code_release"
 
 print(f"src_path_os: {src_path_os}")
 print(f"src_path_str: {src_path_str}")
