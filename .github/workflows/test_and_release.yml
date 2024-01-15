@@ -11,18 +11,38 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-      # Should be in all workflows, almost. It tells github actions to download the content of my repo to my Runner (a VM). 
-      # All other operations may access that code now
-        uses: actions/checkout@v3
+    steps: 
+    # Should be in all workflows, almost. It tells github actions to download the content of my repo to my Runner (a VM). 
+      - uses: actions/checkout@v3
+    strategy:  
+      matrix:  
+        python-version: ["3.9"]
 
   PyTest:
     needs: Build
     runs-on: ubuntu-latest
-    steps:
-      - name: Run Pytest
-        run: |
-          echo Simulating that we are running PyTests
-          echo I will add tests later
+    steps: 
+      - uses: actions/checkout@v3  
+      - name: Set up Python ${{ matrix.python-version }} 
+        uses: actions/setup-python@v4  
+        with:  
+          python-version: ${{ matrix.python-version }}  
+      - name: Install dependencies  
+        run: |  
+          python -m pip install --upgrade pip  
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi    
+      - name: Test with pytest  
+        run: |  
+          coverage run -m pytest  -v -s  
+      - name: Generate Coverage Report  
+        run: |  
+          coverage report -m
+
+
+  
+          
+
+
+
+  
           
