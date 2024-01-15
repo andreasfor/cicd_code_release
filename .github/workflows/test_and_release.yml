@@ -11,15 +11,17 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-latest
+    steps: 
+    # Should be in all workflows, almost. It tells github actions to download the content of my repo to my Runner (a VM). 
+      - uses: actions/checkout@v3
     strategy:  
       matrix:  
-        python-version: ["3.10"]
+        python-version: ["3.9"]
 
   PyTest:
     needs: Build
     runs-on: ubuntu-latest
     steps: 
-    # Should be in all workflows, almost. It tells github actions to download the content of my repo to my Runner (a VM). 
       - uses: actions/checkout@v3  
       - name: Set up Python ${{ matrix.python-version }} 
         uses: actions/setup-python@v4  
