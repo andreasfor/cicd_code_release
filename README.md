@@ -2,6 +2,7 @@
 This repo serves as a demonstrattion of: 
 - Demo 1, How to use GitHub Actions to run tests and push a code release (a tag) from the dev branch to the test branch.
 - Demo 2, How to set PYTHONPATH correctly for VS Code in order to beeing able to call a python package from another package
+- Demo 3, How to set up a GitHub Workflow with Pytest
 
 ## Demo 1
 - Create the two brances.
@@ -43,3 +44,7 @@ Validate your PYHTONPATH
 - Paste your path in the variable src_path_str
 - Run file
 - If the Dir exists and all characters is a match then your PYTHONPATH is set appropriately
+
+## Demo 3, 
+See the workflow file. 
+The code is based on this blog: https://pytest-with-eric.com/integrations/pytest-github-actions/
